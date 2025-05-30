@@ -130,7 +130,7 @@ glueContext.write_dynamic_frame.from_options(
 
 ## 🧐 Athena Queries for Visualization
 
-```sql
+```SAMPLE Sql QUERIES
 -- Longest Routes
 SELECT origin_airport, destination_airport, ROUND(MAX(distance), 2) AS max_distance
 FROM "airlines-database"."raw-raw_data_airlines"
