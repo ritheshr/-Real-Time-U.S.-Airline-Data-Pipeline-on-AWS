@@ -180,7 +180,7 @@ LIMIT 10;
 ## 👨‍💻 Author
 
 **Rithesh Raja** – Cloud Data Engineer
-🔗 [LinkedIn](https://www.linkedin.com/in/rithesh-raja-14a65a167/) | 📧 [yourname@email.com](ritheshraj321@gmail.com)
+🔗LinkedIn: https://www.linkedin.com/in/rithesh-raja-14a65a167/| 📧 ritheshraj321@gmail.com
 
 ---
 
