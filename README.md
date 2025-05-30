@@ -65,7 +65,7 @@ Attach this inline policy to:
 
 ## ♻️ Lambda Trigger Setup
 
-### ✅ Lambda Function Code: `trigger_etl_job.py`
+### ✅ Lambda Function Code: `etl_airports2_job.py`
 
 ```python
 import boto3
@@ -98,7 +98,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 🧲 Glue ETL Job: `etl_airlines_job.py`
+## 🧲 Glue ETL Job: `etl_airports2_job.py`
 
 ```python
 from awsglue.context import GlueContext
