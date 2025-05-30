@@ -65,7 +65,7 @@ Attach this inline policy to:
 
 ## ♻️ Lambda Trigger Setup
 
-### ✅ Lambda Function Code: `etl_airports2_job.py`
+### ✅ Lambda Function Code: `trigger-etl-airports2-job.py`
 
 ```python
 import boto3
