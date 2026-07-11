@@ -1,10 +1,10 @@
-# ✈️ Real-Time U.S. Airline Data Pipeline on AWS
+#  Real-Time U.S. Airline Data Pipeline on AWS
 
 This project implements a fully automated, production-grade ETL pipeline for ingesting, transforming, and visualizing U.S. airline data using AWS services including S3, Glue, Lambda, Athena, and QuickSight.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ├── glue/
@@ -20,7 +20,7 @@ This project implements a fully automated, production-grade ETL pipeline for ing
 
 ---
 
-## 🧱 Architecture Overview
+## Architecture Overview
 
 1. **Data Ingestion**: CSVs uploaded to S3 (`raw-data-airlines`)
 2. **Crawling**: Glue Crawler populates the Data Catalog
@@ -31,9 +31,9 @@ This project implements a fully automated, production-grade ETL pipeline for ing
 
 ---
 
-## 🔐 IAM & Role Configuration
+## IAM & Role Configuration
 
-### ✅ IAM Policy for Glue Crawler & ETL
+### IAM Policy for Glue Crawler & ETL
 
 ```json
 {
@@ -63,9 +63,9 @@ Attach this inline policy to:
 
 ---
 
-## ♻️ Lambda Trigger Setup
+## Lambda Trigger Setup
 
-### ✅ Lambda Function Code: `trigger-etl-airports2-job.py`
+### Lambda Function Code: `trigger-etl-airports2-job.py`
 
 ```python
 import boto3
@@ -80,7 +80,7 @@ def lambda_handler(event, context):
     }
 ```
 
-### ✅ S3 Bucket Trigger Permissions
+###  S3 Bucket Trigger Permissions
 
 ```json
 {
@@ -98,7 +98,7 @@ def lambda_handler(event, context):
 
 ---
 
-## 🧲 Glue ETL Job: `etl_airports2_job.py`
+## Glue ETL Job: `etl_airports2_job.py`
 
 ```python
 from awsglue.context import GlueContext
@@ -128,7 +128,7 @@ glueContext.write_dynamic_frame.from_options(
 
 ---
 
-## 🧐 Athena Queries for Visualization
+## Athena Queries for Visualization
 
 ```SAMPLE Sql QUERIES
 -- Longest Routes
@@ -148,9 +148,9 @@ LIMIT 10;
 
 ---
 
-## 📊 QuickSight Dashboard Structure
+## QuickSight Dashboard Structure
 
-### 🎨 Visuals
+### Visuals
 
 1. **Top 10 Longest Routes** – Horizontal bar, grouped by route
 2. **Most Frequent City Pairs** – Vertical bar, sorted by count
@@ -158,7 +158,7 @@ LIMIT 10;
 4. **Destination Airport Map** – Bubble map by population
 5. **Flights per Route** – Heatmap
 
-### 📁 Filters
+### Filters
 
 * Origin city
 * Destination city
@@ -166,22 +166,22 @@ LIMIT 10;
 
 ---
 
-## 🚀 Deployment Checklist
+##  Deployment Checklist
 
-* [x] Create S3 buckets: `raw-data-airlines`, `processed-data-airlines`
-* [x] Create Glue Crawler + ETL Job
-* [x] Assign IAM roles and inline policies
-* [x] Create Lambda trigger from S3 PUT events
-* [x] Validate with Athena queries
-* [x] Build and publish QuickSight dashboard
+Create S3 buckets: `raw-data-airlines`, `processed-data-airlines`
+Create Glue Crawler + ETL Job
+Assign IAM roles and inline policies
+Create Lambda trigger from S3 PUT events
+Validate with Athena queries
+Build and publish QuickSight dashboard
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Rithesh Raja** – Cloud Data Engineer
 🔗LinkedIn: https://www.linkedin.com/in/rithesh-raja-14a65a167/| 📧 ritheshraj321@gmail.com
 
 ---
 
-> ✨ Fully serverless, highly visualized, and production-ready airline analytics pipeline built with AWS Glue, Lambda, Athena & QuickSight.
+> Fully serverless, highly visualized, and production-ready airline analytics pipeline built with AWS Glue, Lambda, Athena & QuickSight.
